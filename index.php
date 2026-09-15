@@ -8,10 +8,10 @@
         $idade = $_POST["idade"];
 
         if ($idade <= 18) {
-            $resultado = "é menor de idade.";
+            $resultado = "menor de idade.";
         }
         else {
-            $resultado = "é maior de idade.";
+            $resultado = "maior de idade.";
         }
 
     }
