@@ -33,7 +33,7 @@
         
 
     <?php if($resultado != "") {?>
-        <p> <?=$nome?> é <?=$resposta ?></p>     
+        <p> <?=$nome?> é <?=$resultado ?></p>     
 
     <?php } ?>
 
@@ -47,7 +47,7 @@
 
         <h1> Nome: <?=$nome ?></h1>
         <h1> Idade: <?=$idade ?></h1>
-        <p> <?=$nome?> é <?=$resposta ?></p>
+      
     </div>
 
         
