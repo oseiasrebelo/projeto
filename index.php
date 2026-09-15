@@ -29,11 +29,13 @@
         
     <form method="POST">
         <input type="text" id="nome" name="nome">
+        <input type="text" id="idade" idade="idade">
 
         
 
     <?php if($resultado != "") {?>
-        <p> <?=$nome?> é <?=$resultado ?></p>     
+        <p> <?=$nome?> é <?=$resultado ?></p>
+        <p> <?=$idade?> é <?=$resultado ?></p>     
 
     <?php } ?>
 
