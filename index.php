@@ -1,3 +1,22 @@
+<?php
+    $nome="";
+    $idade=0;
+    $resultado="";
+    
+    if ($_SERVER["REQUEST_METHOD"]=="POST"){
+        $nome = $_POST["nome"];
+        $idade = $_POST["idade"];
+
+        if ($idade <= 18) {
+            $resultado = "é menor de idade.";
+        }
+        else {
+            $resultado = "é maior de idade.";
+        }
+
+    }
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,18 +26,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <?php
-        $nome = "Agatha";
-        $idade = 50;
+        
+    <form method="POST">
+        <input type="text" id="nome" name="nome">
+
+        
+
+    <?php if($resultado != "") {?>
+        <p> <?=$nome?> é <?=$resposta ?></p>     
+
+    <?php } ?>
+
+    </form>
+
     
-       
-        if ($idade <= 18) {
-            $resposta = "$é menor de idade.";
-        }
-        else {
-            $resposta = "$é maior de idade.";
-        }     
-        ?>
+
+
 
 <div class="container">
 
@@ -26,6 +49,8 @@
         <h1> Idade: <?=$idade ?></h1>
         <p> <?=$nome?> é <?=$resposta ?></p>
     </div>
+
         
 </body>
 </html>
+
