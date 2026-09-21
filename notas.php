@@ -1,13 +1,11 @@
 <?php
     $nome = "";
     $idade = 0;
-
     $nota1 = 0;
     $nota2 = 0;
     $nota3 = 0;
     $nota4 = 0;
     $nota5 = 0;
-
     $mediaNota = 0;
     $situacao = "";
 
