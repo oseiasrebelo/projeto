@@ -7,6 +7,7 @@
     $nota4 = 0;
     $nota5 = 0;
     $resultado = "";
+    $mediaNota ="";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nome = $_POST["nome"];
@@ -62,6 +63,8 @@
             <h1>Idade: <?= $idade ?></h1>
 
             <p><?= $nome ?> é <?= $resultado ?></p>
+
+            <h1>Media das notas: <?= $mediaNota ?></h1>
 
         </div>
 
