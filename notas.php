@@ -48,7 +48,7 @@
 
     <title>Notas do Aluno</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="notas.css">
 </head>
 
 <body>
