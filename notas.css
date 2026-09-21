@@ -1,5 +1,49 @@
 body {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 30px;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  width: 300px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.container {
+  background-color: white;
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.container h1 {
+  font-size: 18px;
+}
+
+a {
+  color: #333;
+}
