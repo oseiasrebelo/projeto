@@ -28,7 +28,6 @@
 
 <a href="index.php">voltar</a>
 
-<a href="notas.php">notas</a>
 
     <form method="POST">
 
