@@ -26,6 +26,8 @@
 
 <body>
 
+<a href="index.php">voltar</a>
+
     <form method="POST">
 
         <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
