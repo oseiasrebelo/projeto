@@ -28,6 +28,8 @@
 
 <a href="index.php">voltar</a>
 
+<a href="notas.php">notas</a>
+
     <form method="POST">
 
         <input type="text" id="nome" name="nome" placeholder="Digite seu nome">

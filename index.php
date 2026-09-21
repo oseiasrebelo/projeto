@@ -10,6 +10,7 @@
 <body>
 
 <a href="idade.php">Verificador de idade</a>
+<a href="notas.php">ir para notas</a>
 
 
 </body>
