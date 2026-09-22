@@ -1,120 +1,107 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Corpo da página */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
   min-height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding: 40px 20px;
+  padding: 30px;
 }
 
-/* Link voltar */
+/* Botão voltar */
 body > a {
-  color: white;
+  color: #333;
   text-decoration: none;
-  font-size: 16px;
   margin-bottom: 20px;
-
-  transition: 0.3s;
+  font-size: 18px;
 }
 
 body > a:hover {
-  color: #ddd;
-  text-decoration: underline;
+  color: #007bff;
 }
 
 /* Formulário */
 form {
-  width: 100%;
-  max-width: 450px;
+  background: white;
+  width: 400px;
+  max-width: 100%;
 
-  background-color: white;
   padding: 30px;
 
-  border-radius: 15px;
+  border-radius: 10px;
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* Inputs */
+/* Campos */
 input {
   width: 100%;
 
-  padding: 14px 16px;
+  padding: 12px;
 
-  border: 2px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 
   font-size: 16px;
 
   outline: none;
-
-  transition: 0.3s;
 }
 
-/* Input quando selecionado */
 input:focus {
-  border-color: #667eea;
-  box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
+  border-color: #007bff;
 }
 
 /* Botão */
 button {
-  padding: 14px;
+  width: 100%;
 
-  background-color: #667eea;
+  padding: 12px;
+
+  background: #007bff;
   color: white;
 
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
 
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
 
   cursor: pointer;
-
-  transition: 0.3s;
 }
 
 button:hover {
-  background-color: #5568d8;
-  transform: translateY(-2px);
+  background: #0056b3;
 }
 
-button:active {
-  transform: translateY(0);
-}
-
-/* Container do resultado */
+/* Resultado */
 .container {
-  width: 100%;
-  max-width: 450px;
-
-  background-color: white;
+  width: 400px;
+  max-width: 100%;
 
   margin-top: 25px;
-  padding: 25px 30px;
 
-  border-radius: 15px;
+  padding: 25px;
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: white;
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Textos do resultado */
+/* Textos */
 .container h1 {
   font-size: 20px;
   color: #333;
@@ -123,27 +110,21 @@ button:active {
 
   padding-bottom: 10px;
 
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
 }
 
 .container h1:last-child {
   margin-bottom: 0;
-  border-bottom: none;
 }
 
 /* Responsividade */
 @media (max-width: 500px) {
-
   body {
-      padding: 25px 15px;
+      padding: 20px;
   }
 
   form,
   .container {
-      padding: 20px;
-  }
-
-  .container h1 {
-      font-size: 17px;
+      width: 100%;
   }
 }
