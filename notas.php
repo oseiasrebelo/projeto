@@ -69,7 +69,7 @@
             type="number"
             id="idade"
             name="idade"
-            min="0"
+            min="1"
             placeholder="Digite a idade"
             required
             oninvalid="this.setCustomValidity('Por favor, digite uma idade válida a partir de 1.')"
