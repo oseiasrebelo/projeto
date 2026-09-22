@@ -29,13 +29,31 @@
             ($nota5 * 3)
         ) / 10;
 
-        if ($mediaNota >= 7) {
-            $situacao = "APROVADO";
-        } elseif ($mediaNota >= 5) {
-            $situacao = "RECUPERAÇÃO";
-        } else {
-            $situacao = "REPROVADO";
-        }
+      
+        $mediaNota = 5.8; 
+
+
+    if ($mediaNota == 10) {
+        $situacao = "APROVADO COM EXCELÊNCIA";
+    } elseif ($mediaNota >= 7) {
+        $situacao = "APROVADO";
+    } elseif ($mediaNota >= 5) {
+        $situacao = "RECUPERAÇÃO";
+    } else {
+        $situacao = "REPROVADO";
+    }
+
+
+        echo "Situação do aluno: " . $situacao . "<br>";
+
+    if ($situacao === "RECUPERAÇÃO" || $situacao === "REPROVADO") {
+   
+        $pontosFaltantes = 7 - $mediaNota;
+    
+ 
+        echo "Faltaram " . number_format($pontosFaltantes, 1) . " pontos para atingir a média 7.";
+    }
+
     }
 ?>
 
