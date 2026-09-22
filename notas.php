@@ -18,17 +18,17 @@
         $nota5 = floatval($_POST['nota5'] ?? 0);
         $frequencia = floatval($_POST['frequencia'] ?? 0);
 
-        // Cálculo da Média Ponderada
+     
         $mediaNota = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3)) / 10;
 
-        // Novas Regras de Negócio (Média e Frequência)
+     
         if ($frequencia < 75) {
             $situacao = "REPROVADO POR FREQUÊNCIA";
             if ($mediaNota < 7) {
                 $pontosFaltantes = 7 - $mediaNota;
             }
         } else {
-            // Se a frequência for maior ou igual a 75%, avalia a nota
+          
             if ($mediaNota == 10) {
                 $situacao = "APROVADO COM EXCELÊNCIA";
             } elseif ($mediaNota >= 7) {
@@ -77,7 +77,6 @@
         <input type="number" id="nota5" name="nota5" placeholder="Digite a nota 5" step="0.1" min="0" max="10" required
                oninvalid="this.setCustomValidity('Por favor, digite uma nota válida entre 0 e 10.')" oninput="this.setCustomValidity('')">
 
-        <!-- Novo campo de frequência (0% a 100%) -->
         <input type="number" id="frequencia" name="frequencia" placeholder="Digite a frequência (%)" min="0" max="100" required
                oninvalid="this.setCustomValidity('Por favor, insira uma frequência válida entre 0% e 100%.')" oninput="this.setCustomValidity('')">
 
@@ -92,7 +91,6 @@
             <h1>Frequência: <?= htmlspecialchars($frequencia) ?>%</h1>
             <h1>Situação: <?= $situacao ?></h1>
 
-            <!-- Só exibe os pontos faltantes se o aluno não alcançou a média 7 -->
             <?php if ($mediaNota < 7 && $pontosFaltantes > 0) { ?>
                 <h1>Faltaram <?= number_format($pontosFaltantes, 1, ',', '.') ?> pontos para atingir a média 7.</h1>
             <?php } ?>
