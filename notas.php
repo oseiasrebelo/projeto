@@ -29,31 +29,27 @@
             ($nota5 * 3)
         ) / 10;
 
-      
-        $mediaNota = 5.8; 
-
-
-    if ($mediaNota == 10) {
-        $situacao = "APROVADO COM EXCELÊNCIA";
-    } elseif ($mediaNota >= 7) {
-        $situacao = "APROVADO";
-    } elseif ($mediaNota >= 5) {
-        $situacao = "RECUPERAÇÃO";
-    } else {
-        $situacao = "REPROVADO";
-    }
-
-
-        echo "Situação do aluno: " . $situacao . "<br>";
-
-    if ($situacao === "RECUPERAÇÃO" || $situacao === "REPROVADO") {
-   
-        $pontosFaltantes = 7 - $mediaNota;
-    
- 
-        echo "Faltaram " . number_format($pontosFaltantes, 1) . " pontos para atingir a média 7.";
-    }
-
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $nome = $_POST['nome'] ?? 'Não informado';
+            $idade = $_POST['idade'] ?? 'Não informada';
+            $nota1 = floatval($_POST['nota1'] ?? 0);
+            $nota2 = floatval($_POST['nota2'] ?? 0);
+        
+            $mediaNota = ($nota1 + $nota2) / 2;
+            $pontosFaltantes = 0;
+        
+            if ($mediaNota == 10) {
+                $situacao = "APROVADO COM EXCELÊNCIA";
+            } elseif ($mediaNota >= 7) {
+                $situacao = "APROVADO";
+            } elseif ($mediaNota >= 5) {
+                $situacao = "RECUPERAÇÃO";
+                $pontosFaltantes = 7 - $mediaNota;
+            } else {
+                $situacao = "REPROVADO";
+                $pontosFaltantes = 7 - $mediaNota;
+            }
+        }
     }
 ?>
 
@@ -167,9 +163,9 @@
 
         <div class="container">
 
-            <h1>Nome: <?= $nome ?></h1>
+            <h1>Nome: <?= htmlspecialchars($nome) ?></h1>
 
-            <h1>Idade: <?= $idade ?></h1>
+            <h1>Idade: <?= htmlspecialchars($idade) ?></h1>
 
             <h1>
                 Média: <?= number_format($mediaNota, 2, ',', '.') ?>
@@ -178,6 +174,12 @@
             <h1>
                 Situação: <?= $situacao ?>
             </h1>
+
+            <?php if ($mediaNota < 7) { ?>
+                <h1>
+                    Faltaram <?= number_format($pontosFaltantes, 1, ',', '.') ?> pontos para atingir a média 7.
+                </h1>
+            <?php } ?>
 
         </div>
 
