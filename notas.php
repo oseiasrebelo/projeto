@@ -79,8 +79,12 @@
             name="nota1"
             placeholder="Digite a nota 1"
             step="0.1"
+            min="0"
+            max="10"
             required
-        >
+            oninvalid="this.setCustomValidity('Por favor, digite uma nota válida entre 0 e 10.')"
+            oninput="this.setCustomValidity('')"
+>
 
         <input
             type="number"
