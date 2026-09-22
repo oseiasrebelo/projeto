@@ -89,7 +89,12 @@
             <h1>Idade: <?= htmlspecialchars($idade) ?></h1>
             <h1>Média: <?= number_format($mediaNota, 2, ',', '.') ?></h1>
             <h1>Frequência: <?= htmlspecialchars($frequencia) ?>%</h1>
-            <h1>Situação: <?= $situacao ?></h1>
+            <h1 class="situacao <?= 
+                $situacao === 'APROVADO' || $situacao === 'APROVADO COM EXCELÊNCIA' ? 'aprovado' :
+                ($situacao === 'RECUPERAÇÃO' ? 'recuperacao' : 'reprovado')
+                ?>">
+                <?= htmlspecialchars($situacao) ?>
+            </h1>
 
             <?php if ($mediaNota < 7 && $pontosFaltantes > 0) { ?>
                 <h1>Faltaram <?= number_format($pontosFaltantes, 1, ',', '.') ?> pontos para atingir a média 7.</h1>
@@ -99,4 +104,5 @@
 
 </body>
 </html>
+
 
