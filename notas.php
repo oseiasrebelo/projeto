@@ -84,42 +84,58 @@
             required
             oninvalid="this.setCustomValidity('Por favor, digite uma nota válida entre 0 e 10.')"
             oninput="this.setCustomValidity('')"
->
-
-        <input
-            type="number"
-            id="nota2"
-            name="nota2"
-            placeholder="Digite a nota 2"
-            step="0.1"
-            required
         >
 
         <input
             type="number"
-            id="nota3"
-            name="nota3"
-            placeholder="Digite a nota 3"
+            id="nota1"
+            name="nota1"
+            placeholder="Digite a nota 1"
             step="0.1"
+            min="0"
+            max="10"
             required
+            oninvalid="this.setCustomValidity('Por favor, digite uma nota válida entre 0 e 10.')"
+            oninput="this.setCustomValidity('')"
         >
 
         <input
             type="number"
-            id="nota4"
-            name="nota4"
-            placeholder="Digite a nota 4"
+            id="nota1"
+            name="nota1"
+            placeholder="Digite a nota 1"
             step="0.1"
+            min="0"
+            max="10"
             required
+            oninvalid="this.setCustomValidity('Por favor, digite uma nota válida entre 0 e 10.')"
+            oninput="this.setCustomValidity('')"
         >
 
         <input
             type="number"
-            id="nota5"
-            name="nota5"
-            placeholder="Digite a nota 5"
+            id="nota1"
+            name="nota1"
+            placeholder="Digite a nota 1"
             step="0.1"
+            min="0"
+            max="10"
             required
+            oninvalid="this.setCustomValidity('Por favor, digite uma nota válida entre 0 e 10.')"
+            oninput="this.setCustomValidity('')"
+        >
+
+        <input
+            type="number"
+            id="nota1"
+            name="nota1"
+            placeholder="Digite a nota 1"
+            step="0.1"
+            min="0"
+            max="10"
+            required
+            oninvalid="this.setCustomValidity('Por favor, digite uma nota válida entre 0 e 10.')"
+            oninput="this.setCustomValidity('')"
         >
 
         <button type="submit">Enviar</button>
