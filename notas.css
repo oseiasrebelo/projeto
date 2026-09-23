@@ -26,14 +26,17 @@ body {
 body > a {
   display: block;
   width: 430px;
-  margin: 0 auto 15px;
-  text-align: center;
+  margin: 0 auto 15px auto;
+  text-align: center !important;
   color: white;
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
 }
 
+body > a:hover {
+  text-decoration: underline;
+}
 
 /* =========================
  FORMULÁRIO
