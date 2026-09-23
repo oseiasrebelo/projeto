@@ -2,7 +2,14 @@ body {
     background: red !important;
 }
 
+h1 {
+    color: blue;
+    font-size: 60px;
+}
+
 a {
+    display: block;
     color: yellow;
     font-size: 30px;
+    margin: 20px;
 }
