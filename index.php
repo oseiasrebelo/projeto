@@ -3,24 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome e Idade</title>
 
-    <title>Teste</title>
-
-    <style>
-        body {
-            background: red;
-        }
-
-        h1 {
-            color: blue;
-            font-size: 60px;
-        }
-    </style>
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
 
-    <h1>TESTE</h1>
+<a href="idade.php">Verificador de idade</a>
+<a href="notas.php">ir para notas</a>
+
 
 </body>
 </html>
