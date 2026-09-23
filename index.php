@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Teste CSS</title>
+    <title>Teste</title>
 
-    <link rel="stylesheet" href="./index.css">
+    <style>
+        body {
+            background: red;
+        }
+
+        h1 {
+            color: blue;
+            font-size: 60px;
+        }
+    </style>
 </head>
 
 <body>
 
     <h1>TESTE</h1>
-
-    <a href="idade.php">Verificador de idade</a>
-    <a href="notas.php">Ir para notas</a>
 
 </body>
 </html>
