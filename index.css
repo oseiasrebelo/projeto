@@ -8,6 +8,7 @@ body {
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
 
+    /* Fundo degradê */
     background: linear-gradient(120deg, #6579df, #7448a5);
 
     display: flex;
@@ -16,6 +17,7 @@ body {
     justify-content: center;
 }
 
+/* Título/links */
 a {
     width: 470px;
     padding: 16px;
@@ -23,13 +25,10 @@ a {
 
     text-align: center;
     text-decoration: none;
-
     color: white;
     font-weight: bold;
-    font-size: 16px;
 
     background: linear-gradient(90deg, #6579df, #7448a5);
-
     border-radius: 8px;
 
     transition: 0.3s;
