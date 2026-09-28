@@ -37,7 +37,7 @@
 
         <div class="container">
             
-            <p><?= $nome ?> é <?= $resultado ?></p>
+            <p><?= $nome ?> <?= $resultado ?></p>
 
         </div>
 
