@@ -3,9 +3,9 @@
     $senha = 0;
     $resultado = "";
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $usuario = $_POST["usuario"];
-        $senha = $_POST["senha"];
+    if ($_SERVER["REQUEST_METHOD"] == "GET") {
+        $usuario = $_GET["usuario"];
+        $senha = $_GET["senha"];
 
         if ($senha == 123 and $usuario == "usuario") {
             $resultado = "Login realisado com sucesso!";
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="login-basico.css">
 </head>
 <body>
-    <form method="POST">
+    <form method="GET">
 
         <input type="text" id="usuario" name="usuario" placeholder="Digite o usuário">
 
