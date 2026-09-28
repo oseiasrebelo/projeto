@@ -3,9 +3,9 @@
     $senha = 0;
     $resultado = "";
 
-    if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        $usuario = $_GET["usuario"];
-        $senha = $_GET["senha"];
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $usuario = $_POST["usuario"];
+        $senha = $_POST["senha"];
 
         if ($senha == 123 and $usuario == "usuario") {
             $resultado = "Login realisado com sucesso!";
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="login-basico.css">
 </head>
 <body>
-    <form method="GET">
+    <form method="POST">
 
         <input type="text" id="usuario" name="usuario" placeholder="Digite o usuário">
 
@@ -45,3 +45,6 @@
     
 </body>
 </html>
+
+<!-- no GET, o URL mostra os dados de usuario e senha: "login-basico.php?usuario=usuario&senha=123"
+ Enquanto que no POST, apenas:"login-basico.php"
