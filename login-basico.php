@@ -20,7 +20,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>logi-basico</title>
+    <title>login-basico</title>
     <link rel="stylesheet" href="login-basico.css">
 </head>
 <body>
