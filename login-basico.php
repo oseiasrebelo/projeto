@@ -8,9 +8,9 @@
         $senha = $_POST["senha"];
 
         if ($senha == 123 and $usuario == "usuario") {
-            $resultado = "login realisado com sucesso!";
+            $resultado = "Login realisado com sucesso!";
         } else {
-            $resultado = "Usuário ou senha incorretos";
+            $resultado = "Usuário ou senha incorretos!";
         }
     }
 ?>
