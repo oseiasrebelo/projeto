@@ -11,7 +11,7 @@ $senha = "315!@#";
 // new = criar um novo objeto
 
 try {
-    $pdo = new POD("mysql:host=$host;dbname=$banco;
+    $pdo = new PDO("mysql:host=$host;dbname=$banco;
     charset=utf8mb4", $usuario, $senha);
 
     // serve para puxar algo que pertence aquele objeto

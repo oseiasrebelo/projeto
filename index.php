@@ -1,5 +1,5 @@
 <?php
-    require "conexão.php";
+    require "conexao.php";
 
     echo "<br>Meu sistema está conectado!";
 
