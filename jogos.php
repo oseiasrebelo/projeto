@@ -14,9 +14,6 @@
 
     echo "<br>Tabela criada com sucesso!";
 
-?>
-
-<?php
     $nomeJogo = "";
     $genro = "";
     $nota = 0;
@@ -25,6 +22,12 @@
     $genero = $_POST["genero"];
     $nota = $_POST["nota"];
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $nomeJogo = $_POST["nomeJogo"] ?? 'Não informado';
+        $genero = $_POST["negero"] ?? 'Não informada';
+        $nota = $_POST["nota"] ?? 'Não informada';
+        
+    }
 ?>
 
 
