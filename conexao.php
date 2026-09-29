@@ -1,12 +1,11 @@
 <?php
 
-// dados para conecção MySQL
+// dados para conexão MySQL
 $host = "localhost";
 $banco = "oseias315";
 $usuario = "oseias315";
 $senha = "315!@#";
 
-// pdh = 
 // PDO = php Data Objects - Ferramenta php para conversar com o banco de dados
 // new = criar um novo objeto
 
