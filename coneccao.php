@@ -30,3 +30,4 @@ try {
     echo "Erro ao executar:".$erro->getMessage();
 
 }
+?>
