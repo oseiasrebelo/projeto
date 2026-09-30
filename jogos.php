@@ -30,6 +30,18 @@
 
         echo "<br>Jogo cadastrado com sucesso!";
     }
+    //buscar todos os jogos registrados
+
+    $buscar = "SELECT * FROM jogos";
+
+    //exec() = executa algo quando você não precisa receber registros de volta
+    //query() = executa uma consulta quando você quer receber dados de volta
+
+    $stmt = $pdo->query($buscar);
+    // fetchall = buscar todos
+    //FEtch_assoc = Pedir em formado json
+    $jogos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 
@@ -62,6 +74,31 @@
         <button type="submit">Cadastrar</button>
 
     </form>
+
+    <h2>JOGOS CADASTRADOS<h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Gênero</th>
+            <th>Nota</th>
+
+        </tr>
+        <!--Para cada item, gerar alguma coisa -->
+        <?php foreach($jogos as $jogo) { ?>
+
+            <tr>
+                <td><?= $jogo["id"] ?></td>
+                <td><?= $jogo["nome"] ?></td>
+                <td><?= $jogo["genero"] ?></td>
+                <td><?= $jogo["nota"] ?></td>
+
+            </tr>
+
+
+        <?php } ?>
+
+    </table>
     
 </body>
 </html>
