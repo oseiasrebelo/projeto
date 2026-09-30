@@ -8,7 +8,6 @@
         nome VARCHAR(100),
         genero VARCHAR(100),
         nota INT
-        ano_lancamento INT
     )";
 
     $pdo->exec($sql);
@@ -18,16 +17,14 @@
     $nome = "";
     $genero = "";
     $nota = 0;
-    $ano_lancamento = 0;
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nome = $_POST["nome"] ?? 'Não informado';
         $genero = $_POST["genero"] ?? 'Não informada';
         $nota = $_POST["nota"] ?? 'Não informada';
-        $ano_lancamento = $_POST["ano_lancamento"] ?? 'Não informada';
 
-        $sql = "INSERT INTO jogos (nome, genero, nota, ano_lancamento)
-        VALUES ('$nome', '$genero', '$nota', '$ano_lancamento')";
+        $sql = "INSERT INTO jogos (nome, genero, nota)
+        VALUES ('$nome', '$genero', '$nota')";
 
         $pdo->exec($sql);
 
@@ -60,10 +57,6 @@
         <input type="number"
             id="nota" name="nota"
             placeholder="Digite a nota">
-
-        <input type="number"
-            id="ano_lancamento" name="ano_lancamento"
-            placeholder="Digite o ano de lançamento">
 
 
         <button type="submit">Cadastrar</button>
