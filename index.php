@@ -29,7 +29,8 @@
 <body>
 
 <a href="idade.php">Verificador de idade</a>
-<a href="notas.php">ir para notas</a>
+<a href="notas.php">Notas</a>
+<a href="jogos.php">Jogos</a>"
 
 
 </body>

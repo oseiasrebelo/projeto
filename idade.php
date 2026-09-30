@@ -26,7 +26,7 @@
 
 <body>
 
-<a href="index.php">voltar</a>
+<a href="index.php">voltar para o menu</a>
 
 
     <form method="POST">

@@ -55,6 +55,7 @@
     <link rel="stylesheet" href="jogos.css">
 </head>
 <body>
+    <a href="index.php">Voltar</a>
 
     <form method="POST">
 
