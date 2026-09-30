@@ -14,6 +14,9 @@
 
     echo "<br>Tabela criada com sucesso!";
 
+    $sql = "ALTER TABLE jogos 
+            ADD COLUMN ano_lancamento INT;
+
 
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -21,6 +24,7 @@
         $genero = $_POST["genero"] ?? 'Não informada';
         $nota = $_POST["nota"] ?? 'Não informada';
 
+    
         $sql = "INSERT INTO jogos (nome, genero, nota)
         VALUES ('$nome', '$genero', '$nota')";
 
