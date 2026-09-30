@@ -54,7 +54,7 @@
 </head>
 <body>
 
-    <a href="index.php">Voltar</a>
+    <a href="index.php">Voltar papa o menu</a>
 
     <form method="POST">
         <input type="text" id="nome" name="nome" placeholder="Digite o nome do aluno" required>
