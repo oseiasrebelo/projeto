@@ -14,9 +14,7 @@
 
     echo "<br>Tabela criada com sucesso!";
 
-    $nome = "";
-    $genero = "";
-    $nota = 0;
+
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nome = $_POST["nome"] ?? 'Não informado';
@@ -55,7 +53,7 @@
     <link rel="stylesheet" href="jogos.css">
 </head>
 <body>
-    <a href="index.php">Voltar</a>
+    <a href="index.php">Voltar para o menu</a>
 
     <form method="POST">
 

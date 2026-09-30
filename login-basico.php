@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="login-basico.css">
 </head>
 <body>
+    <a href="index.php">Voltar</a>
+    
     <form method="POST">
 
         <input type="text" id="usuario" name="usuario" placeholder="Digite o usuário">
