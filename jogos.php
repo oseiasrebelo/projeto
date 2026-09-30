@@ -24,9 +24,16 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nome = $_POST["nome"] ?? 'Não informado';
-        $genero = $_POST["negero"] ?? 'Não informada';
+        $genero = $_POST["genero"] ?? 'Não informada';
         $nota = $_POST["nota"] ?? 'Não informada';
 
+        // Cadastro do jogo
+        $sql = "INSERT INTO jogos (nome, genero, nota)
+        VALUES ('$nome', '$genero', '$nota')";
+
+        $pdo->exec($sql);
+
+echo "<br>Jogo cadastrado com sucesso!";
     }
 ?>
 
@@ -44,13 +51,19 @@
 
     <form method="POST">
 
-        <input type="text" id="nome" name="nome" placeholder="Digite o nome do jogo">
+        <input type="text"
+            id="nome" name="nome"
+            placeholder="Digite o nome do jogo">
 
-        <input type="text" id="genero" name="genero" placeholder="Digite o genero">
+        <input type="text"
+            id="genero" name="genero"
+            placeholder="Digite o genero">
         
-        <input type="number" id="nota" name="nota" placeholder="Digite a nota">
+        <input type="number"
+            id="nota" name="nota"
+            placeholder="Digite a nota">
 
-        <button type="submit">Enviar</button>
+        <button type="submit">Cadastrar</button>
 
     </form>
     
