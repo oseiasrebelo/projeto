@@ -31,7 +31,7 @@
 
         $pdo->exec($sql);
 
-echo "<br>Jogo cadastrado com sucesso!";
+        echo "<br>Jogo cadastrado com sucesso!";
     }
 ?>
 
