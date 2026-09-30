@@ -18,16 +18,16 @@
     $nome = "";
     $genero = "";
     $nota = 0;
-    $ano = 0;
+    $ano_lancamento = 0;
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nome = $_POST["nome"] ?? 'Não informado';
         $genero = $_POST["genero"] ?? 'Não informada';
         $nota = $_POST["nota"] ?? 'Não informada';
-        $ano = $_POST["ano"] ?? 'Não informada';
+        $ano_lancamento = $_POST["ano_lancamento"] ?? 'Não informada';
 
         $sql = "INSERT INTO jogos (nome, genero, nota, ano_lancamento)
-        VALUES ('$nome', '$genero', '$nota', '$ano')";
+        VALUES ('$nome', '$genero', '$nota', '$ano_lancamento')";
 
         $pdo->exec($sql);
 
@@ -62,8 +62,8 @@ echo "<br>Jogo cadastrado com sucesso!";
             placeholder="Digite a nota">
 
         <input type="number"
-            id="ano" name="ano"
-            placeholder="Digite a nota">
+            id="ano_lancamento" name="ano_lancamento"
+            placeholder="Digite o ano de lançamento">
 
 
         <button type="submit">Cadastrar</button>
