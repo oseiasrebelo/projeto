@@ -14,9 +14,9 @@
 
     echo "<br>Tabela criada com sucesso!";
 
-    $sql = "ALTER TABLE jogos ( 
-            ADD COLUMN ano_lancamento INT)";
-            $pdo->exec($sql);
+        $sql = "ALTER TABLE jogos
+            ADD ano_lancamento INT";
+        $pdo->exec($sql);
 
 
 
