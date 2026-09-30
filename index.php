@@ -31,7 +31,7 @@
 <a href="idade.php">Verificador de idade</a>
 <a href="notas.php">Notas</a>
 <a href="jogos.php">Jogos</a>
-<a href="login-basico.php">Jogos</a>
+<a href="login-basico.php">Login básico</a>
 
 
 </body>
