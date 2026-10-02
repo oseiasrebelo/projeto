@@ -80,7 +80,7 @@
 
     </form>
 
-    <h2>JOGOS CADASTRADOS<h2>
+    <h2>JOGOS CADASTRADOS</h2>
     <table>
         <tr>
             <th>ID</th>
