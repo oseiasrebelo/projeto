@@ -28,7 +28,7 @@
 
     
         $sql = "INSERT INTO jogos (nome, genero, nota)
-        VALUES ('$nome', '$genero', '$nota')";
+        VALUES ('$nome', '$genero', '$nota', '$ano_lancamento')";
 
         $pdo->exec($sql);
 
@@ -91,6 +91,7 @@
             <th>Nome</th>
             <th>Gênero</th>
             <th>Nota</th>
+            <th>Ano_lançamento</th>
 
         </tr>
         <!--Para cada item, gerar alguma coisa -->
@@ -101,6 +102,7 @@
                 <td><?= $jogo["nome"] ?></td>
                 <td><?= $jogo["genero"] ?></td>
                 <td><?= $jogo["nota"] ?></td>
+                <td><?= $jogo["ano_lancamento"] ?></td>
 
             </tr>
 
