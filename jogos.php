@@ -14,10 +14,6 @@
 
     echo "<br>Tabela criada com sucesso!";
 
-        $sql = "ALTER TABLE jogos
-            ADD ano_lancamento INT";
-        $pdo->exec($sql);
-
 
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -26,6 +22,11 @@
         $nota = $_POST["nota"] ?? 'Não informada';
         $ano_lancamento = $_POST["ano_lancamento"] ?? 'Não informada';
 
+    
+        $sql = "INSERT INTO jogos (nome, genero, nota, ano_lancamento)
+        VALUES ('$nome', '$genero', '$nota', '$ano_lancamento')";
+
+        $pdo->exec($sql);
 
         echo "<br>Jogo cadastrado com sucesso!";
     }
