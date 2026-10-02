@@ -26,11 +26,6 @@
         $nota = $_POST["nota"] ?? 'Não informada';
         $ano_lancamento = $_POST["ano_lancamento"] ?? 'Não informada';
 
-    
-        $sql = "INSERT INTO jogos (nome, genero, nota)
-        VALUES ('$nome', '$genero', '$nota', '$ano_lancamento')";
-
-        $pdo->exec($sql);
 
         echo "<br>Jogo cadastrado com sucesso!";
     }
