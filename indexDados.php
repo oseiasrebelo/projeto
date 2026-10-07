@@ -13,9 +13,9 @@
 
   // 4. Criar um aluno
     $novoAluno = [
-    "nome" => $nome = $_POST["nome"],
-    "idade" => $idade = $_POST["idade"],
-    "curso" => $curso = $_POST["curso"]
+    "nome" => $_POST["nome"],
+    "idade" => $_POST["idade"],
+    "curso" => $_POST["curso"]
     ];
 
   // 5. Adicionar o aluno no array
@@ -53,14 +53,14 @@
     <input type="text" id="idade" name="idade" placeholder="Digite sua idade">
     <label>Curso: </label>
     <input type="text" id="curso" name="curso" placeholder="Digite seu curso">
-    <button type="submit">Enviar</button>
+    <button type="submit">Cadastrar</button>
   </form>
 
   <h2>ALUNOS CADASTRADOS</h2>
   <?php foreach($alunos as $aluno) {?>
     <h3><?= $aluno["nome"] ?></h3>
     <p>Idade: <? $aluno["idade"] ?></p>
-    <p>Curso: <? $aluno["Curso"] ?></p>
+    <p>Curso: <? $aluno["curso"] ?></p>
   <?php } ?>
 </body>
 </html>
