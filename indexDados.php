@@ -32,6 +32,9 @@
 
     echo "DADOS REGISTRADOS EM dados.json";
   }
+
+
+
 ?>
 
 
@@ -50,6 +53,13 @@
     <input type="text" id="idade" name="idade" placeholder="Digite sua idade">
     <label>Curso: </label>
     <input type="text" id="curso" name="curso" placeholder="Digite seu curso">
-    
+  </form>
+
+  <h2>ALUNOS CADASTRADOS</h2>
+  <?php foreach($alunos as $aluno) {?>
+    <h3><?= $aluno["nome"] ?></h3>
+    <p>Idade: <? $aluno["idade"] ?></p>
+    <p>Curso: <? $aluno["Curso"] ?></p>
+  <?php } ?>
 </body>
 </html>
