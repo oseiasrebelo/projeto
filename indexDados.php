@@ -63,6 +63,11 @@
 
   }
 
+  if ($acao == "deletar"){
+
+
+  }
+
   }
 
 
@@ -107,6 +112,17 @@
     <label>Curso: </label>
     <input type="text" id="curso" name="curso" placeholder="Digite seu curso">
     <button type="submit" name="acao" value="atualizar">Atualizar</button>
+  </form>
+
+  <h2>DELETAR CADASTROS</h2>
+  <form method="POST">
+    <label>Nome: </label>
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+    <label>Idade: </label>
+    <input type="text" id="idade" name="idade" placeholder="Digite sua idade">
+    <label>Curso: </label>
+    <input type="text" id="curso" name="curso" placeholder="Digite seu curso">
+    <button type="submit" name="acao" value="deletar">Deletar</button>
   </form>
 </body>
 </html>
