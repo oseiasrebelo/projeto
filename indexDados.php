@@ -1,0 +1,45 @@
+<?php
+  // 1. DECLARAR O CAMINHO DO ARQUIVO JSON
+    $caminho = __DIR__ . "/dados.json";
+
+  // 2. Abrir/ler o arquivo json
+    $json = file_get_contents($caminho);
+
+  // 3. Transformar json em array php
+    $alunos = json_decode($json, true);
+
+  // 4. Criar um aluno
+    $novoAluno = [
+    "nome" => "Oseias",
+    "idade" => "33",
+    "curso" => "Desenvolvimento de sistemas"
+    ];
+
+  // 5. Adicionar o aluno no array
+    $alunos[] = $novoAluno;
+
+  // 6. Transformar array php em json
+    $alunos = json_encode($alunos,
+    JSON_PRETTY_PRINT |
+    JSON_UNESCAPED_UNICODE  
+);
+
+// 7. SALVAR O ARQUIVO
+    file_put_contents($caminho, $jsonAtualizado);
+
+    echo "DADOS REGISTRADOS EM dados.json";
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
