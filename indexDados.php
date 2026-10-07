@@ -19,7 +19,7 @@
     $alunos[] = $novoAluno;
 
   // 6. Transformar array php em json
-    $alunos = json_encode($alunos,
+    $jsonAtualizado = json_encode($alunos,
     JSON_PRETTY_PRINT |
     JSON_UNESCAPED_UNICODE  
 );
