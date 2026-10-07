@@ -1,4 +1,5 @@
 <?php
+
   // 1. DECLARAR O CAMINHO DO ARQUIVO JSON
     $caminho = __DIR__ . "/dados.json";
 
@@ -7,6 +8,8 @@
 
   // 3. Transformar json em array php
     $alunos = json_decode($json, true);
+
+  if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   // 4. Criar um aluno
     $novoAluno = [
@@ -28,7 +31,7 @@
     file_put_contents($caminho, $jsonAtualizado);
 
     echo "DADOS REGISTRADOS EM dados.json";
-
+  }
 ?>
 
 
@@ -40,6 +43,13 @@
     <title>Document</title>
 </head>
 <body>
+  <form method="post">
+    <label>Nome: </label>
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+    <label>Idade: </label>
+    <input type="text" id="idade" name="idade" placeholder="Digite sua idade">
+    <label>Curso: </label>
+    <input type="text" id="curso" name="curso" placeholder="Digite seu curso">
     
 </body>
 </html>
