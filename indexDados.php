@@ -64,8 +64,16 @@
   }
 
   if ($acao == "deletar"){
+      $nome = $_POST["nome"];
 
+      foreach ($alunos as $posicao => $aluno) {
 
+        if ($aluno["nome"] === $nome) {
+
+        unset($alunos[$posicao]);
+        }
+      }
+      $alunos = array_values($alunos);
   }
 
   }
