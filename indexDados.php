@@ -53,6 +53,7 @@
     <input type="text" id="idade" name="idade" placeholder="Digite sua idade">
     <label>Curso: </label>
     <input type="text" id="curso" name="curso" placeholder="Digite seu curso">
+    <button type="submit">Enviar</button>
   </form>
 
   <h2>ALUNOS CADASTRADOS</h2>
