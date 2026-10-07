@@ -13,9 +13,9 @@
 
   // 4. Criar um aluno
     $novoAluno = [
-    "nome" => "Oseias",
-    "idade" => "33",
-    "curso" => "Desenvolvimento de sistemas"
+    "nome" => $nome = $_POST["nome"],
+    "idade" => $idade = $_POST["idade"],
+    "curso" => $curso = $_POST["curso"]
     ];
 
   // 5. Adicionar o aluno no array
