@@ -81,6 +81,7 @@ $caminho = __DIR__ . "/chamados.json";
         <p>Descrição do problema: <?= $chamado["descrição"] ?></p>
         <p>Prioridade: <?= $chamado["prioridade"] ?></p>
         <p>Status atual: <?= $chamado["status"] ?></p>
+        
 
   <?php } ?>
     </form>
