@@ -55,21 +55,21 @@ $caminho = __DIR__ . "/chamados.json";
 
     <form method="POST">
         <label>Nome do funcionário: </label>
-        <input type="text" id="nome" name="nome">
+        <input type="text" id="nome" name="nome"><br>
         
         <label>Setor da empresa: </label>
-        <input type="text" id="setor" name="setor">
+        <input type="text" id="setor" name="setor"><br>
         
         <label>Equipamento afetado: </label>
-        <input type="text" id="equipamento" name="equipamento">
+        <input type="text" id="equipamento" name="equipamento"><br>
 
         <label>Descrição do problema: </label>
-        <input type="text" id="descrição" name="descrição">
+        <input type="text" id="descrição" name="descrição"><br>
 
         <label>Prioridade: </label>
-        <input type="text" id="prioridade" name="prioridade">
+        <input type="text" id="prioridade" name="prioridade"><br>
 
-        <label>Status: Aberto </label>
+        <label>Status: Aberto </label><br>
         
         <button type="submit">Criar chamado</button>
     </form>
