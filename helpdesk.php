@@ -78,10 +78,17 @@ $caminho = __DIR__ . "/chamados.json";
         <label>Descrição do problema: </label>
         <input type="text" id="descrição" name="descrição"><br>
 
-        <label>Prioridade: </label>
-        <input type="text" id="prioridade" name="prioridade"><br>
+        <label for="prioridade">Prioridade:</label>
+            <select id="prioridade" name="prioridade">
+                <option value="baixa">Baixa</option>
+                <option value="média">Média</option>
+                <option value="alta">Alta</option>
+            </select><br>
 
-        <label>Status: Aberto </label><br>
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+                <option value="aberto">Aberto</option>
+            </select><br>
         
         <button type="submit">Criar chamado</button>
 
