@@ -25,7 +25,7 @@ $caminho = __DIR__ . "/chamados.json";
                 ];
 
             // 5. Adicionar o chamado no array
-            $chamados[] = $novochamado;
+            $chamados[] = $novoChamado;
 
       // 6. Transformar array php em json
             $jsonAtualizado = json_encode($chamados,
@@ -36,7 +36,7 @@ $caminho = __DIR__ . "/chamados.json";
     // 7. SALVAR O ARQUIVO
             file_put_contents($caminho, $jsonAtualizado);
     
-            echo "DADOS REGISTRADOS EM dados.json";
+            echo "DADOS REGISTRADOS EM chamados.json";
         }
     }   
 
