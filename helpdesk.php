@@ -93,16 +93,17 @@ $caminho = __DIR__ . "/chamados.json";
         <button type="submit">Criar chamado</button>
 
         <h2>CHAMADOS REALIZADOS</h2>
+
         <?php foreach($chamados as $chamado) {?>
-        <h3><?= $chamado["nome"] ?></h3>
-        <p>Setor: <?= $chamado["setor"] ?></p>
-        <p>Equipamento afetado: <?= $chamado["equipamento"] ?></p>
-        <p>Descrição do problema: <?= $chamado["descrição"] ?></p>
-        <p>Prioridade: <?= $chamado["prioridade"] ?></p>
-        <p>Status atual: <?= $chamado["status"] ?>
+            <h3><?= $chamado["nome"] ?></h3>
+            <p>Setor: <?= $chamado["setor"] ?></p>
+            <p>Equipamento afetado: <?= $chamado["equipamento"] ?></p>
+            <p>Descrição do problema: <?= $chamado["descrição"] ?></p>
+            <p>Prioridade: <?= $chamado["prioridade"] ?></p>
+            <p>Status atual: <?= $chamado["status"] ?>
 
 
-  <?php } ?>
+        <?php } ?>
     </form>
     
 </body>
