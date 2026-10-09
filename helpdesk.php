@@ -64,9 +64,9 @@ $caminho = __DIR__ . "/chamados.json";
                 <option value="logístico">Logístico</option>
                 <option value="finaceiro">Finaceiro</option>
                 <option value="Ti">TI</option>
-            </select><br>
+                </select><br>
         
-            <label for="equipamento">Equipamento afetado:</label>
+        <label for="equipamento">Equipamento afetado:</label>
             <select id="equipamentor" name="equipamento">
                 <option value="computador">Computador</option>
                 <option value="impressora">Impressora</option>
