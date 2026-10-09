@@ -61,14 +61,13 @@ $caminho = __DIR__ . "/chamados.json";
         <label>Equipamento afetado: </label>
         <input type="text" id="equipamento" name="equipamento">
 
-        <label>Descriçãp do problema: </label>
+        <label>Descrição do problema: </label>
         <input type="text" id="descrição" name="descrição">
 
         <label>Prioridade: </label>
         <input type="text" id="prioridade" name="prioridade">
 
-        <label id="Status: Aberto"></label>
-
+        <label>Status: Aberto </label>
         
         <button type="submit">Criar chamado</button>
     </form>
