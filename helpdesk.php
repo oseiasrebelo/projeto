@@ -57,8 +57,14 @@ $caminho = __DIR__ . "/chamados.json";
         <label>Nome do funcionário: </label>
         <input type="text" id="nome" name="nome"><br>
         
-        <label>Setor da empresa: </label>
-        <input type="text" id="setor" name="setor"><br>
+        <label for="setor">Setor:</label>
+            <select id="setor" name="setor">
+                <option value="produção">Produção</option>
+                <option value="administrativo">Administrativo</option>
+                <option value="logístico">Logístico</option>
+                <option value="finaceiro">Finaceiro</option>
+                <option value="Ti">TI</option>
+            </select>
         
         <label>Equipamento afetado: </label>
         <input type="text" id="equipamento" name="equipamento"><br>
@@ -80,7 +86,7 @@ $caminho = __DIR__ . "/chamados.json";
         <p>Equipamento afetado: <?= $chamado["equipamento"] ?></p>
         <p>Descrição do problema: <?= $chamado["descrição"] ?></p>
         <p>Prioridade: <?= $chamado["prioridade"] ?></p>
-        <!-- <p>Status atual: <?= $chamado["status"] ?></p> -->
+        <p>Status atual: <?= $chamado["status"] ?>
 
 
   <?php } ?>
