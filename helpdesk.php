@@ -1,44 +1,41 @@
 <?php
 
-$caminho = __DIR__ . "/chamados.json";
+require_once "helpdesk.php"  ;
 
-  // 2. Abrir/ler o arquivo json
-    $json = file_get_contents($caminho);
+$mensagem = "";
+    //Identificar a operação solicitada
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    //O operador ?? é chamado de operador de coalescencia nula.
+    // Ele significa:
+        //"Utilize o valor da esquerda, se ele existir e nao for nulo.
+        //caso contrario, utilize o valor da direita"
+    $acao = $_POST["acao"]?? "";
 
-  // 3. Transformar json em array php
-    $chamados = json_decode($json, true);
 
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
+    if ($acao === "cadastrar") {
+        $sucesso = cadastrarChamados(
+            $_POST["nome"] ?? "",
+            $_POST["setor"] ?? "",
+            $_POST["equipamento"] ?? "",
+            $_POST["descricao"] ?? "",
+            $_POST["prioridade"] ?? ""
+        );
 
-        $acao = $_POST["acao"];
+        $mensagem = $sucesso ? "Chamado cadastrado som sucesso!" :
+        "Erro ao cadastrar. Verifique os dados";
+    }
 
-        if ($acao === "criar") {
+    if ($acao === "atualizar") {
+        $sucesso = atualizarChamados(
+            (int) ($_POST["posicao"] ?? -1),
+            $_POST["status"] ?? ""
+        );
 
-            // 4. Criar um chamado
-                $novoChamado = [
-                "nome" => $_POST["nome"],
-                "setor" => $_POST["setor"],
-                "equipamento" => $_POST["equipamento"],
-                "descricao" => $_POST["descricao"],
-                "prioridade" => $_POST["prioridade"],
-                "status" => $_POST["status"]
-                ];
+        $mensagem = $sucesso ? "Status atualizado!" : "Não foi possível atualizar.";
+    }
 
-            // 5. Adicionar o chamado no array
-            $chamados[] = $novoChamado;
 
-      // 6. Transformar array php em json
-            $jsonAtualizado = json_encode($chamados,
-                JSON_PRETTY_PRINT |
-                JSON_UNESCAPED_UNICODE  
-            );
-    
-    // 7. SALVAR O ARQUIVO
-            file_put_contents($caminho, $jsonAtualizado);
-    
-            echo "DADOS REGISTRADOS EM chamados.json";
-        }
-    }   
+}
 
 ?>
 

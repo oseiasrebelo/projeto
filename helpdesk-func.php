@@ -125,12 +125,13 @@ function gerarRelatorio(){
         if ($chamado["status"] === "Aberto") {
             $relatorio["abertos"]++;
         } elseif ($chamado["status"] === "em andamento") {
+            $relatorio["andamento"]++;
+        } elseif($chamado ["status"] === "Resolvido"){
             $relatorio["resolvidos"]++;
         }
     }
 
     return $relatorio;
-
 
 
 }
