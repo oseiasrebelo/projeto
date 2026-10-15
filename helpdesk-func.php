@@ -65,15 +65,73 @@ function cadastrarChamados(
 function atualizarChamados($posicao, $novoStatus){
     $chamados = lerChamados();
 
+    $statusPermitidos = [
+        "Aberto",
+        "Em andamento",
+        "Resolvido"
+    ];
+
+    //isset() verifica se uma variavel ou posição existe e nao contem null.
+    // o ! inverte o resultado
+    //portanto: "se nao existir um chamado naquela posição,
+    //encerra a função retornando false
+
+    if (!isset($chamados[$posicao])){
+        return false;
+    }
+
+    // in_array () verifica se um valor existe dentro de um array
+    //Nesse caso
+    // 
+
+    if (!in_array($novoStatus, $statusPermitidos, true)){
+        return false;
+    }
+
+    $chamados[$posicao]["status"] = $novoStatus;
+
+    return salvarChamados($chamados);
+
 }
 
 //DELETE - excluir chamados
-function excluirChamados(){
+function excluirChamados($posicao) {
+    $chamados = lerChamados();
+
+    if (!isset($chamados[$posicao])){
+        return false;
+    }
+
+    unset($chamados[$posicao]);
+
+    $chamados = array_values($chamados);
+
+    return salvarChamados($chamados);
 
 }
 
 //RELATORIO DE ATENDIMANTOS
 function gerarRelatorio(){
+    $chamados = lerChamados();
+
+    $relatorio = [
+        "total" => count($chamados),
+        "abertos" => 0,
+        "andamento" => 0, 
+        "resolvidos" => 0,
+    ];
+
+    foreach ($chamados as $chamado) {
+        if ($chamado["status"] === "Aberto") {
+            $relatorio["abertos"]++;
+        } elseif ($chamado["status"] === "em andamento") {
+            $relatorio["resolvidos"]++;
+        }
+    }
+
+    return $relatorio;
+
+
 
 }
 
