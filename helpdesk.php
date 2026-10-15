@@ -34,7 +34,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mensagem = $sucesso ? "Status atualizado!" : "Não foi possível atualizar.";
     }
 
+    if ($acao === "atualizar") {
+        //o int é uma coversão de tipo, tambem chamada de type casting.
+        //Ele tenta transformar o valor em um numero inteiro.
+        $sucesso = excluirChamados((int) ($_POST["posicao"] ?? -1));
 
+        $mensagem = $sucesso ? "Chamado excluido!" : "Não foi possível excluir.";
+    }
+
+}
+
+$chamados = lerChamados();
+$relatorio = gerarRelatorio();
+
+//Evita exibir HTML enviado pelo usuario
+function escapar($valor) {
+    return htmlspecialchars((string) $valor, ENT_QUOTES, "UTF-8");
 }
 
 ?>
