@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mensagem = $sucesso ? "Status atualizado!" : "Não foi possível atualizar.";
     }
 
-    if ($acao === "atualizar") {
+    if ($acao === "excluir") {
         //o int é uma coversão de tipo, tambem chamada de type casting.
         //Ele tenta transformar o valor em um numero inteiro.
         $sucesso = excluirChamados((int) ($_POST["posicao"] ?? -1));
@@ -59,14 +59,22 @@ function escapar($valor) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Helpdesk</title>
 </head>
 <body>
+
+    <?php if (!empty($mensagem)): ?>
+        <p><strong><?= escapar($mensagem) ?></strong></p>
+    <?php endif; ?>
 
     <h2>NOVO CHAMADO</h2>
 
     <form method="POST">
-        <label>Nome do funcionário: </label>
+
+        <!-- Envia o parâmetro acao necessário para o PHP -->
+        <input type="hidden" name="acao" value="cadastrar">
+
+        <label for="nome">Nome do funcionário: </label>
         <input type="text" id="nome" name="nome"><br>
         
         <label for="setor">Setor:</label>
@@ -87,8 +95,8 @@ function escapar($valor) {
                 <option value="outros">Outros</option>
             </select><br>
 
-        <label>Descrição do problema: </label>
-        <input type="text" id="descrição" name="descrição"><br>
+        <label for="descricao">Descrição do problema: </label>
+        <input type="text" id="descricao" name="descricao"><br>
 
         <label for="prioridade">Prioridade:</label>
             <select id="prioridade" name="prioridade">
@@ -96,27 +104,25 @@ function escapar($valor) {
                 <option value="média">Média</option>
                 <option value="alta">Alta</option>
             </select><br>
-
-            <label for="status">Status:</label>
-            <select id="status" name="status">
-                <option value="aberto">Aberto</option>
-            </select><br>
         
         <button type="submit">Criar chamado</button>
 
-        <h2>CHAMADOS REALIZADOS</h2>
-
-        <?php foreach($chamados as $chamado) {?>
-            <h3><?= $chamado["nome"] ?></h3>
-            <p>Setor: <?= $chamado["setor"] ?></p>
-            <p>Equipamento afetado: <?= $chamado["equipamento"] ?></p>
-            <p>Descrição do problema: <?= $chamado["descrição"] ?></p>
-            <p>Prioridade: <?= $chamado["prioridade"] ?></p>
-            <p>Status atual: <?= $chamado["status"] ?>
-
-
-        <?php } ?>
+        
     </form>
+
+    <h2>CHAMADOS REALIZADOS</h2>
+
+    <?php foreach($chamados as $chamado): ?>
+        <div>
+            <h3><?= escapar($chamado["nome"] ?? "") ?></h3>
+            <p>Setor: <?= escapar($chamado["setor"] ?? "") ?></p>
+            <p>Equipamento afetado: <?= escapar($chamado["equipamento"] ?? "") ?></p>
+            <p>Descrição do problema: <?= escapar($chamado["descricao"] ?? "") ?></p>
+            <p>Prioridade: <?= escapar($chamado["prioridade"] ?? "") ?></p>
+            <p>Status atual: <?= escapar($chamado["status"] ?? "") ?></p>
+        </div>
+        <hr>
+    <?php endforeach; ?>
     
 </body>
 </html>
