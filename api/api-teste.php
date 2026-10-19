@@ -66,5 +66,11 @@ if ($metodo === 'POST') {
 
 }
 
+header('Allow: GET, POST');
+http_response_code(405);
+
+// COMANDOS NA VPS PARA TESTAR;
+
+
 
 ?>
