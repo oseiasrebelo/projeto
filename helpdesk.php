@@ -123,6 +123,6 @@ function escapar($valor) {
         </div>
         <hr>
     <?php endforeach; ?>
-    
+     
 </body>
 </html>
