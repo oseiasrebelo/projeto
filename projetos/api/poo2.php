@@ -41,7 +41,7 @@ class Esteira extends Maquina {
     }
 }
 
-class EPrensa extends Maquina {
+class Prensa extends Maquina {
     public function operar() {
         return "Prensando peças...";
     }
@@ -49,14 +49,14 @@ class EPrensa extends Maquina {
 
 class RoboSoldagem extends Maquina {
     public function operar() {
-        return "Soldadndo peças...";
+        return "Soldando peças...";
     }
 }
 
 // 3. SESSÃO = ARMEZENAMENTO TEMPORÁRIO
 
-if (!isset($_SESSION["mauinas"])) {
-    $_SESSION["maquinas"] = [];
+if (!isset($_SESSION["maquina"])) {
+    $_SESSION["maquina"] = [];
 }
 
 $mensagem = "";
@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $maquina = new Esteira($nome);
         } elseif ($tipo === "prensa") {
             $maquina = new Prensa($nome);
-        } elseif ($tipo === "roboSoldade") {
+        } elseif ($tipo === "roboSoldagem") {
             $maquina = new RoboSoldagem($nome);
 }
 
@@ -100,8 +100,8 @@ function escapar($texto) {
     return htmlspecialchars(
         (string) $texto,
         ENT_QUOTES,
-        "utf-8";
-    )
+        "UTF-8");
+
 }
 
 ?>
@@ -114,6 +114,25 @@ function escapar($texto) {
     <title>Document</title>
 </head>
 <body>
-    
+
+<form method="POST">
+
+        <input type="text"
+            id="nome" name="nome"
+            placeholder="Digite o nome da maquina">
+
+        <input type="text"
+            id="tipo" name="tipo"
+            placeholder="Digite o tipo">
+        
+        <input type="number"
+            id="quantidade" name="quantidade"
+            placeholder="Digite a quantidade">
+
+
+        <button type="submit">Cadastrar</button>
+
+</form>
+     
 </body>
 </html>
