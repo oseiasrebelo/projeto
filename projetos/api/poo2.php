@@ -67,8 +67,53 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $nome = $_POST["nome"] ?? "";
     $tipo = $_POST["tipo"] ?? "";
     $quantidade = $_POST["quantidade"] ?? null;
+
+    if (
+        $nome === "" ||
+        $quantidade === false ||
+        $quantidade <= 0
+    ) {
+        $mensagem = "Preencha os campos corretamente!";
+    } else {
+        //CRIANDO OBSJETOS COM BASE NO FORMULARIO
+        if ($tipo === "esteira") {
+            $maquina = new Esteira($nome);
+        } elseif ($tipo === "prensa") {
+            $maquina = new Prensa($nome);
+        } elseif ($tipo === "roboSoldade") {
+            $maquina = new RoboSoldagem($nome);
 }
 
+        //EXECUTANDO OS METODOS DO OBJETO
+        $maquina->registrarProducao($quantidade);
 
+        // GUARDANDO O OBJETO NA SESSÃO
+        $_SESSION["maquina"][] = $maquina;
+
+        $mensagem = "Maquina cadastrada com sucesso";
+    }
+
+}
+
+// EVITAR INTERPRETAR TEXTOS COMO HTML
+function escapar($texto) {
+    return htmlspecialchars(
+        (string) $texto,
+        ENT_QUOTES,
+        "utf-8";
+    )
+}
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
