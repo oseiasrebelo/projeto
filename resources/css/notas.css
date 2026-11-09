@@ -1,0 +1,239 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  color: #333;
+}
+
+/* =========================
+ LINK VOLTAR
+========================= */
+
+body > a {
+  display: block;
+  width: 430px;
+  margin: 0 auto 15px auto;
+  text-align: center !important;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+body > a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+ FORMULÁRIO
+========================= */
+
+form {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input {
+  width: 100%;
+  padding: 14px 16px;
+
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+
+  font-size: 16px;
+  outline: none;
+
+  transition: 0.2s;
+}
+
+form input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+form input::placeholder {
+  color: #999;
+}
+
+/* =========================
+ BOTÃO
+========================= */
+
+form button {
+  margin-top: 5px;
+
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.20);
+}
+
+form button:active {
+  transform: translateY(0);
+}
+
+/* =========================
+ CARD DO RESULTADO
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 500px;
+
+  margin-top: 25px;
+  padding: 30px;
+
+  background-color: white;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+}
+
+/* =========================
+ INFORMAÇÕES DO ALUNO
+========================= */
+
+.container h1 {
+  font-size: 18px;
+  font-weight: normal;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.container h1:first-child {
+  font-size: 23px;
+  font-weight: bold;
+  color: #333;
+  padding-top: 0;
+}
+
+/* =========================
+ SITUAÇÃO
+========================= */
+
+.container .situacao {
+  margin-top: 20px;
+  padding: 16px;
+
+  border-radius: 12px;
+
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+
+  border: none;
+}
+
+/* =========================
+ APROVADO
+ Verde
+========================= */
+
+.container .situacao.aprovado {
+  background-color: #d1fae5;
+  color: #047857;
+  border: 2px solid #10b981;
+}
+
+/* =========================
+ RECUPERAÇÃO
+ Amarelo/Laranja
+========================= */
+
+.container .situacao.recuperacao {
+  background-color: #fef3c7;
+  color: #b45309;
+  border: 2px solid #f59e0b;
+}
+
+/* =========================
+ REPROVADO
+ Vermelho
+========================= */
+
+.container .situacao.reprovado {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 2px solid #ef4444;
+}
+
+/* =========================
+ PONTOS FALTANTES
+========================= */
+
+.container h1:last-child {
+  margin-top: 15px;
+  padding: 15px;
+
+  background-color: #f5f5f5;
+  border-radius: 10px;
+
+  font-size: 16px;
+  text-align: center;
+  color: #555;
+}
+
+/* =========================
+ RESPONSIVIDADE
+========================= */
+
+@media (max-width: 600px) {
+
+  body {
+      padding: 25px 15px;
+  }
+
+  form,
+  .container {
+      padding: 22px;
+  }
+
+  .container h1 {
+      font-size: 16px;
+  }
+
+  .container h1:first-child {
+      font-size: 20px;
+  }
+
+  .container .situacao {
+      font-size: 18px;
+  }
+}
