@@ -1,0 +1,365 @@
+/* ==========================================
+   CONFIGURAÇÃO GERAL E IDENTIDADE VISUAL
+   ========================================== */
+   body {
+    font-family: 'Courier New', Courier, monospace; /* Fonte estilo máquina da imagem */
+    background-color: #f7b119; /* O mesmo fundo laranja vibrante */
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Base de texto padrão do seu sistema */
+p, li, span, h3 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* ==========================================
+   MENU DE NAVEGAÇÃO (NAVBAR - Estilo Caixa Flutuante)
+   ========================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #fcfaf2; /* Cor bege/creme da imagem */
+    border: 3px solid #1a1a1a; /* Borda grossa preta */
+    border-radius: 12px;
+    position: fixed;
+    top: 15px;
+    left: 5%;
+    width: 90%;
+    z-index: 1000;
+    box-shadow: 4px 4px 0px #1a1a1a; /* Sombra sólida geométrica */
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.menu a {
+    font-weight: bold;
+    padding: 6px 12px;
+    border: 2px solid transparent;
+    font-size: 0.9rem;
+}
+
+/* Efeito Hover idêntico aos botões superiores do seu sistema */
+.menu a:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border-radius: 6px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* ==========================================
+   PAINEL PRINCIPAL (HERO / INÍCIO)
+   ========================================== */
+.inicio {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 40px 20px;
+}
+
+.inicio-conteudo {
+    background-color: #fcfaf2; /* Caixa bege clara */
+    border: 3px solid #1a1a1a; /* Borda preta marcada */
+    border-radius: 24px; /* Cantos arredondados do seu painel */
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 8px 8px 0px #1a1a1a; /* Sombra sólida preta da imagem */
+    text-align: center;
+}
+
+.saudacao {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.inicio h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.inicio h2 {
+    font-size: 1.3rem;
+    color: #444444;
+    margin-bottom: 20px;
+}
+
+.inicio p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    border-top: 2px dashed #1a1a1a; /* Linha tracejada divisória */
+    padding-top: 20px;
+}
+
+/* Botão principal (Estilo botão 'Cadastrar' / 'Voltar para o Menu') */
+.botao {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #1a1a1a;
+    box-shadow: 0px 4px 0px #555555;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    text-transform: uppercase;
+}
+
+.botao:hover {
+    background-color: #fcfaf2;
+    color: #1a1a1a;
+}
+
+.botao:active {
+    transform: translateY(4px);
+    box-shadow: 0px 0px 0px #555555;
+}
+
+/* ==========================================
+   SEÇÕES GERAIS (SOBRE E HABILIDADES)
+   ========================================== */
+.secao {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Transforma a seção sobre em um painel do mesmo estilo do cadastro */
+.sobre_conteudo {
+    background-color: #fcfaf2;
+    border: 3px solid #1a1a1a;
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 8px 8px 0px #1a1a1a;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.foto {
+
+     /* para centralizar a imagem: */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    flex: 10;
+    min-height: 200px;
+    background-color: #e2e8f0;
+    border: 2px solid #1a1a1a;
+    border-radius: 12px;
+
+   
+}
+
+.sobre-texto {
+    flex: 2;
+}
+
+.sobre-texto h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    border-bottom: 2px dashed #1a1a1a;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.sobre-texto p {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+/* Títulos externos formatados como blocos limpos */
+.titulo-secao {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.subtitulo-secao {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* Encapsula Habilidades para ficarem dentro de um painel estruturado */
+.secao-destaque {
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcfaf2;
+    border: 3px solid #1a1a1a;
+    border-radius: 24px;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    box-shadow: 8px 8px 0px #1a1a1a;
+}
+
+.lista-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Habilidades parecidas com as tags de tecnologia */
+.habilidade {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   CARDS DE PROJETOS (Estilo Tabela / Blocos de Dados)
+   ========================================== */
+#projetos-curso {
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column; /* Organizados um abaixo do outro como linhas de uma lista */
+    gap: 25px;
+    width: 100%;
+}
+
+.projeto-card {
+    background-color: #fcfaf2;
+    border: 3px solid #1a1a1a;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 6px 6px 0px #1a1a1a;
+    position: relative;
+}
+
+/* Número do ID no canto superior direito */
+.projeto-numero {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    border: 2px solid #1a1a1a;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background-color: #e2e8f0;
+}
+
+.projeto-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-right: 60px;
+    border-bottom: 2px dashed #1a1a1a;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.projeto-card p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+/* Pequenas tags pretas como os cabeçalhos da tabela */
+.tecnologias span {
+    background-color: #e2e8f0;
+    color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+/* Link estilizado como o botão 'Voltar para o Menu' */
+.link-projeto {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 2px solid #1a1a1a;
+    box-shadow: 0px 3px 0px #555555;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.link-projeto:hover {
+    background-color: #fcfaf2;
+    color: #1a1a1a;
+}
+
+.link-projeto:active {
+    transform: translateY(3px);
+    box-shadow: 0px 0px 0px #555555;
+}
+
+/* ==========================================
+   RESPONSIVIDADE (Telas menores)
+   ========================================== */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .sobre_conteudo {
+        flex-direction: column;
+    }
+    .navbar {
+        width: 90%;
+        left: 5%;
+    }
+}

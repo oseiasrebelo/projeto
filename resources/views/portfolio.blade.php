@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio Milfont</title>
+    <title>Portifólio Oseias</title>
 
-    @vite(['resources/css/style.css'])
+    @vite(['resources/css/index.css'])
    <!-- em LARAVEL naõ usa LINK, o caminha deve ser escrito como está acima <link rel="stylesheet" href="/resources/css/css/style.index.css" -->
 </head>
 <body>
