@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio Milfont</title>
 
-    @vite(['resources/css/style.index.css'])
+    @vite(['resources/css/style.css'])
    <!-- em LARAVEL naõ usa LINK, o caminha deve ser escrito como está acima <link rel="stylesheet" href="/resources/css/css/style.index.css" -->
 </head>
 <body>
