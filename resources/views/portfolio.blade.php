@@ -41,15 +41,14 @@
         ========================== -->
         <section id="inicio" class="inicio">
             <div class="inicio-conteudo"> 
-                <p class="saudacao">Olá! Eu sou a </p>
+                <p class="saudacao">Olá! Eu sou o </p>
 
                 <h1>Oseias</h1>
 
-                <h2>Desenvolvedora em formação</h2>
+                <h2>Desenvolvedor em formação</h2>
 
                 <p>
-                    Estudante de Desenvolvimento de Sistemas,
-                    Formada em Design e Mestre em História da Arte.
+                    Estudante de Desenvolvimento de Sistemas
                 </p>
 
                 <a href= "" class="botao">
