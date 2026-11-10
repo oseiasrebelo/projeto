@@ -1,11 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Oseias</title>
+    <title>Portifólio Oseias</title>
 
     @vite(['resources/css/index.css'])
+   <!-- em LARAVEL naõ usa LINK, o caminha deve ser escrito como está acima <link rel="stylesheet" href="/resources/css/css/style.index.css" -->
 </head>
 <body>
     <header>
@@ -13,7 +15,7 @@
             MENU DE NAVEGAÇÃO
         ========================== -->
         <nav class="navbar">
-            <h2 class="logo">Meu Portfólio</h2>
+            <h2 class="logo">Meu portifólio</h2>
 
             <button class="menu-toggle" aria-label="Abrir Menu">
                 <span></span>
@@ -22,7 +24,7 @@
             </button>
 
             <ul class="menu">
-                <li><a href="#inicio">Início</a></li>
+                <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#projetos-curso">Projetos</a></li>
@@ -30,15 +32,16 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+
     </header>
 
     <main>
         <!-- ==========================  
-            INÍCIO / HERO
+            MENU DE NAVEGAÇÃO
         ========================== -->
         <section id="inicio" class="inicio">
             <div class="inicio-conteudo"> 
-                <p class="saudacao">Olá! Eu sou o</p>
+                <p class="saudacao">Olá! Eu sou o </p>
 
                 <h1>Oseias</h1>
 
@@ -48,69 +51,88 @@
                     Estudante de Desenvolvimento de Sistemas
                 </p>
 
-                <a href="#projetos-curso" class="botao">
+                <a href= "" class="botao">
                     Ver meus projetos
                 </a>    
             </div>
         </section>
 
         <!-- ==========================  
-            SOBRE MIM
+            MENU DE NAVEGAÇÃO
         ========================== -->
         <section id="sobre" class="secao">
             <div class="sobre_conteudo">
                 <div class="foto">
-                    <img src="/resources/images/louca.png" alt="Foto de perfil de Oseias">  
+                <img src="/resources/images/louca.png" alt="Foto de uma representação de Ticiana para a carta Louco do tarot">  
                 </div>
                 <div class="sobre-texto">
                     <h3>Quem sou eu?</h3>
                     <p>
-                        Meu nome é Oseias e sou estudante de Desenvolvimento de Sistemas.
+                        Meu nome é Oseias e sou estudante
+                        de Desenvolvimento de Sistemas.
                     </p>
                     <p>
-                        Atualmente estou cursando desenvolvimento em front-end e back-end.
-                        Este portfólio reúne alguns dos projetos desenvolvidos durante o curso de Desenvolvimento de Sistemas (SENAI).
+                        Atualmente estou cursando desenvolvimento em front-end
+                        e back-end.
+                        Este portifílio reúne alguns dos projetos desenvolvidos
+                        durante o curso de Desenvolvimento de Sistemas (SENAI).
                     </p>
                     <p>
-                        Meu objetivo é continuar evoluindo como Desenvolvedor, aprendendo novas tecnologias e me adaptando ao cenário mais recente do mercado.
+                        Meu objetivo é conitinuar evoluindo como Desenvolvedor, 
+                        aprendendo novas tecnologias e se adaptar ao cenário
+                        mais recente do mercado.
                     </p>
                 </div>
             </div>
         </section>
-
         <!-- ==========================  
             HABILIDADES
         ========================== -->
         <section id="habilidades" class="secao secao-destaque">
             <h2 class="titulo-secao">Minhas Habilidades</h2>
             <p class="subtitulo-secao">
-                Algumas tecnologias que estou estudando:
+                Algumas tecnologias que eu estou estudando:
             </p>
             <div class="lista-habilidades">
-                <div class="habilidade">HTML</div>
-                <div class="habilidade">CSS</div>
-                <div class="habilidade">JS</div>
-                <div class="habilidade">REACT</div>
-                <div class="habilidade">PYTHON</div>
-                <div class="habilidade">LINGUAGEM C</div>
-                <div class="habilidade">PHP</div>
+                <div class="habilidade">
+                    HTML
+                </div>
+                <div class="habilidade">
+                    CSS
+                </div>
+                <div class="habilidade">
+                    JS
+                </div>
+                <div class="habilidade">
+                    REACT
+                </div>
+                <div class="habilidade">
+                    PYTHON
+                </div>
+                <div class="habilidade">
+                    LINGUAGEM C
+                </div>
+                <div class="habilidade">
+                    PHP
+                </div>
             </div>
         </section>
-
         <!-- ==========================  
             PROJETOS - CURSO
         ========================== -->
-        <section id="projetos-curso" class="secao">
-            <h2 class="titulo-secao">Meus Projetos</h2>
+      
+  <section id="projetos-curso" class="secao">
+            <h2 class="titulo-secao">Meus projetos</h2>
             <p class="subtitulo-secao">
                 Alguns projetos desenvolvidos durante o curso.
             </p>
-            
+            <!-- PROJETO 1 -->
             <div class="projetos-container">
-                <!-- PROJETO 1 -->
                 <div class="projeto-card">
-                    <div class="projeto-numero">01</div>
-                    <h3>Estufa IOT (C e Python)</h3>
+                    <div class="projeto-numero">
+                        01
+                    </div>
+                    <h3>Estufa IOT (C e Pyhton)</h3>
                     <p>
                         Sistema de estufa com controle de condições climáticas através de sensores.
                     </p>
@@ -118,58 +140,72 @@
                         <span>Python</span>
                         <span>Linguagem C</span>
                     </div>
-                    <a href="https://github.com/TiciMilfont/Estufa---IOT---MQTT" class="link-projeto" target="_blank">Ver projeto →</a>
+                    <a href="https://github.com/TiciMilfont/Estufa---IOT---MQTT" class="link-projeto">Ver projeto →</a>
                 </div>
                 
                 <!-- PROJETO 2 -->
                 <div class="projeto-card">
-                    <div class="projeto-numero">02</div>
+                    <div class="projeto-numero">
+                        02
+                    </div>
                     <h3>Sensor de velocidade</h3>
                     <p>
                         Ecossistema de Internet das Coisas (IoT) voltado para telemetria automotiva e monitoramento de velocidade
-                        em tempo real. Integra firmware em C/C++ (ESP32-S3), API em Node.js (Express) com MySQL e dashboard web responsivo.
+                        em tempo real. O projeto integra um firmware em C/C++ (ESP32-S3) que captura pulsos magnéticos via interrupções de hardware,
+                        uma API em Node.js (Express) com MySQL para a ingestão e persistência dos dados de rede, e um dashboard web responsivo que
+                        atualiza dinamicamente indicadores digitais por meio de consumo assíncrono.
                     </p>
                     <div class="tecnologias">
                         <span>ESP32</span>
-                        <span>Front-End</span>
-                        <span>Node.js / Express</span>
+                        <span>Front-End (HTML, CSS, JavaScript)</span>
+                        <span>Back-end: Node.js, Express, REST API (JSON / HTTP)</span>
                     </div>
-                    <a href="https://github.com/TiciMilfont/Moto-do-Xand-o" class="link-projeto" target="_blank">Ver projeto →</a>
+                    <a href="https://github.com/TiciMilfont/Moto-do-Xand-o" class="link-projeto">Ver projeto →</a>
                 </div>
             </div>
         </section>
-
         <!-- ==========================  
-            PROJETOS - PHP (ATIVIDADES)
+            PROJETOS - PHP
         ========================== -->
-        <section id="projetos-php" class="secao secao-destaque">
-            <h2 class="titulo-secao">Minhas Atividades</h2>
+        <section id="projetos-curso" class="secao">
+            <h2 class="titulo-secao">Minhas atividades</h2>
             <p class="subtitulo-secao">
                 Algumas atividades desenvolvidas durante as aulas de PHP.
             </p>
-            
+            <!-- PROJETO 1 -->
             <div class="projetos-container">
-                <!-- PROJETO 1 -->
                 <div class="projeto-card">
-                    <div class="projeto-numero">01</div>
-                    <h3>Verificar idade em PHP</h3>
+                    <div class="projeto-numero">
+                        01
+                    </div>
+                    <h3>Vereficar idade em PHP</h3>
                     <p>
-                        Aplicação web responsiva desenvolvida em PHP estruturado e HTML5 para validação dinâmica de dados e controle de fluxo via método POST.
+                        Aplicação web responsiva desenvolvida em PHP estruturado e HTML5 para
+                        validação dinâmica de dados e controle de fluxo. O projeto processa
+                        requisições de formulários via método POST de forma nativa, realizando a
+                        captura, tratamento de variáveis e renderização condicional na
+                        mesma interface para determinar a maioridade do usuário com base nas
+                        regras de negócio implementadas.
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="/index.php?rota=idade" class="link-projeto">Ver atividade →</a>
+                    <a href="/index.php?rota=idade" class="link-projeto" >Ver atividade →</a>
                 </div>
-
                 <!-- PROJETO 2 -->
                 <div class="projeto-card">
-                    <div class="projeto-numero">02</div>
-                    <h3>Verificar notas em PHP</h3>
+                    <div class="projeto-numero">
+                        02
+                    </div>
+                    <h3>Vereficar notas em PHP</h3>
                     <p>
-                        Sistema de gestão acadêmica em PHP nativo e HTML5 que processa e valida o desempenho de estudantes via formulário POST.
+                        Sistema de gestão acadêmica em PHP nativo e HTML5 que processa e
+                        valida o desempenho de estudantes via formulário POST. A aplicação calcula médias
+                        ponderadas complexas cruzando notas e frequência, aplicando uma lógica de negócio
+                        backend para determinar o status escolar e renderizar o resultado de forma condicional
+                        e reativa na interface.
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
@@ -178,13 +214,18 @@
                     </div>
                     <a href="/index.php?rota=notas" class="link-projeto">Ver atividade →</a>
                 </div>
-
                 <!-- PROJETO 3 -->
                 <div class="projeto-card">
-                    <div class="projeto-numero">03</div>
+                    <div class="projeto-numero">
+                        03
+                    </div>
                     <h3>Login básico em PHP</h3>
                     <p>
-                        Mecanismo básico de autenticação desenvolvido em PHP nativo e HTML5 para simular o fluxo de login de um usuário.
+                        Mecanismo básico de autenticação desenvolvido em PHP nativo e HTML5
+                        para simular o fluxo de login de um usuário. O script processa credenciais
+                        estáticas de forma síncrona via requisições POST, validando os dados no backend
+                        para exibir mensagens de feedback dinâmicas na interface e incluindo um helper
+                        em JavaScript para exibição de credenciais de teste.
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
@@ -194,13 +235,18 @@
                     </div>
                     <a href="/index.php?rota=login_basico" class="link-projeto">Ver atividade →</a>
                 </div>
-
                 <!-- PROJETO 4 -->
                 <div class="projeto-card">
-                    <div class="projeto-numero">04</div>
+                    <div class="projeto-numero">
+                        04
+                    </div>
                     <h3>Cadastro de jogos em PHP</h3>
                     <p>
-                        Aplicação CRUD em PHP nativo utilizando PDO para integração, persistência e leitura de dados em MySQL.
+                        Aplicação CRUD em PHP nativo utilizando a extensão PDO para integração, persistência e leitura de
+                        dados em um banco de dados MySQL. O projeto realiza a criação automatizada de tabelas estruturais
+                        (Data Definition Language), gerencia o fluxo de cadastro seguro via autenticação por token estático
+                        no backend e consome dados do servidor de forma síncrona para renderizar listagens dinâmicas em
+                        tabelas HTML.
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
@@ -209,13 +255,18 @@
                     </div>
                     <a href="/index.php?rota=jogos" class="link-projeto">Ver atividade →</a>
                 </div>
-
-                <!-- PROJETO 5 -->
+                 <!-- PROJETO 5 -->
                 <div class="projeto-card">
-                    <div class="projeto-numero">05</div>
-                    <h3>Desafio para Atividades Notas</h3>
+                    <div class="projeto-numero">
+                        05
+                    </div>
+                    <h3>Desafio para a Atividades Notas</h3>
                     <p>
-                        Sistema de gestão acadêmica em PHP nativo e HTML5 para cálculo de médias ponderadas complexas e verificação de status escolar.
+                        Sistema de gestão acadêmica em PHP nativo e HTML5 que processa e
+                        valida o desempenho de estudantes via formulário POST. A aplicação calcula médias
+                        ponderadas complexas cruzando notas e frequência, aplicando uma lógica de negócio
+                        backend para determinar o status escolar e renderizar o resultado de forma condicional
+                        e reativa na interface.
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
@@ -223,14 +274,19 @@
                         <span>PHP</span>
                     </div>
                     <a href="/index.php?rota=desafio_notas" class="link-projeto">Ver atividade →</a>
-                </div>
+            </div>
 
-                <!-- PROJETO 6 -->
-                <div class="projeto-card">
-                    <div class="projeto-numero">06</div>
-                    <h3>Chamado de TI</h3>
+            <!-- PROJETO 6 -->
+            <div class="projeto-card">
+                    <div class="projeto-numero">
+                        06
+                    </div>
+                    <h3>CHAMADO DE TI</h3>
                     <p>
-                        Sistema básico de gerenciamento de chamados técnicos para registrar e acompanhar problemas de tecnologia da informação.
+
+                    Sistema básico de gerenciamento de chamados técnicos, semelhante aos utilizados por empresas e 
+                    indústrias para registrar problemas relacionados à tecnologia da informação.
+                    .
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
@@ -239,40 +295,39 @@
                         <span>JSON</span>
                     </div>
                     <a href="/index.php?rota=git projeto.chamados.ti/helpdesk.php" class="link-projeto">Ver atividade →</a>
-                </div>
             </div>
         </section>
-
-        <!-- ==========================  
+         <!-- ==========================  
             CONTATO
         ========================== -->
-        <section id="contato" class="secao">
+        <section id="contato" class="secao secao-destaque">
             <h2 class="titulo-secao">Contato</h2>
             <p class="subtitulo-secao">
-                Entre em contato comigo:
+                Contato:
             </p>
             <div class="contato-container">
                 <div class="contato-item">
-                    <h3>WhatsApp</h3>
+                    <h3>Whatsapp</h3>
                     <p>+55 (41) xxxxx-xxxx</p>
                 </div>
                 <div class="contato-item">
                     <h3>GitHub</h3>
-                    <a href="https://github.com/oseiasrebelo" target="_blank">github.com/oseiasrebelo</a>
+                    <a href="https://github.com/oseiasrebelo"><github class="com">
+                    <ticimilfont></ticimilfont></a>
                 </div>
                 <div class="contato-item">
                     <h3>LinkedIn</h3>
-                    <a href="https://linkedin.com/in/ticianamilfont" target="_blank">linkedin.com/in/ticianamilfont</a>
+                    <a href=" ">linkedin.com/in/ticianamilfont</a>
                 </div>
             </div>
         </section>
-    </main>
+        <footer>
+            <p>
+                Desenvolvido por <a href="https://ticiana315.devlook.xyz"> Oseias </a> • 2026
+            </p>
+        </footer>
 
-    <footer>
-        <p>
-            Desenvolvido por <a href="https://ticiana315.devlook.xyz" target="_blank">Oseias</a> &copy; 2026
-        </p>
-    </footer>
+    </main>
 
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
@@ -283,6 +338,7 @@
             menu.classList.toggle('ativo');
         });
 
+        // Fecha o menu automaticamente quando o utilizador clica num link da lista
         document.querySelectorAll('.menu a').forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('ativo');
