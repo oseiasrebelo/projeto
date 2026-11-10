@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('portfolio');
+// Aponta para a pasta views/api/portfolio.blade.php
+Route::get('/portfolio', function () {
+    return view('api.portfolio');
 });
