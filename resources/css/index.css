@@ -199,6 +199,7 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
+
 .inicio h2 {
   font-size: clamp(1.5rem, 4vw, 2.2rem);
   color: var(--text-muted);
