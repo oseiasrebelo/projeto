@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,7 +57,7 @@
             </div>
         </section>
 
-        <!-- ==========================  
+        <!-- =================
             MENU DE NAVEGAÇÃO
         ========================== -->
         <section id="sobre" class="secao">
